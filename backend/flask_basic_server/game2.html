@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Memory Game</title>
+    <style>
+        body {
+            background-color: #37474F;
+            font-family: Arial, sans-serif;
+            text-align: center;
+		color: #fff;
+            padding-top: 50px;
+        }
+        h1, h2 {
+            margin-bottom: 20px;
+            font-weight: 700;
+		color: #fff;
+        }
+        h1 {
+		margin-top: 12rem;
+            font-size: 48px;
+            color: #fff;;
+        }
+        h2 {
+            font-size: 24px;
+            color: #fff;;
+        }
+        form {
+            margin: 0 auto;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 40px;
+		color: #fff;
+        }
+        label {
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: #fff;;
+        }
+        input[type="number"] {
+            font-size: 16px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 1px 1px 5px #999;
+            margin-bottom: 20px;
+            width: 200px;
+            text-align: center;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease-in-out;
+        }
+        input[type="submit"]:hover {
+            background-color: #3E8E41;
+        }
+        p {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #7F7F7F;
+        }
+        #result {
+            margin-top: 50px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #353535;
+        }
+    </style>
+</head>
+<body>
+    <h1>Memory Game</h1>
+    <h2>In this game you will choose the amount of numbers (between 1-10) you can remember for 0.7 seconds and we will examine you!</h2>
+    <form action="/show_numbers" method="POST">
+        <label for="count_of_numbers">Amount of numbers you can remember:</label>
+        <input type="number" name="amount" id="amount" required />
+        <br>
+        <input type="submit" value="Submit" />
+    </form>
+    <p>*After you hit submit you will be redirected to a new page after 5 seconds and the numbers will be shown there</p>
+    <div id="result"></div>
+</body>
+</html>

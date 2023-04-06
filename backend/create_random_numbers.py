@@ -1,5 +1,6 @@
 import random
 
+'''Creates random numbers'''
 
 def render(amount):
     randoms_list = []

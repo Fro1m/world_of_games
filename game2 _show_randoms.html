@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Memory Game-Results</title>
+    <style>
+        body {
+            background-color: #37474F;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: #fff;
+            margin-top: 130px;
+        }
+        ul {
+            list-style: none;
+            margin: 30px auto;
+            padding: 0;
+            width: 20%;
+        }
+        li {
+            background-color: #4CAF50;
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 10px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        setTimeout(function() {
+            window.location.href = '/game2_insert_result'; // Redirect to another page after 1 second
+        }, 1700); // Delay for 1 second
+    </script>
+</head>
+<body>
+    <h1>The numbers are:</h1>
+    <ul>
+        {% for item in result %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
